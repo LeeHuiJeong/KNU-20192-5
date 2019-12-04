@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:src="@drawable/mainbus"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:text="DAEGU"
+            android:textStyle="bold"
+            android:textColor="#4B0082"
+            android:textSize="45dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnBookMark"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="즐겨찾기"
+            android:textSize="30dp"
+            android:background="#AFEEEE"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:id="@+id/btnStation"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#AFEEEE"
+            android:layout_margin="10dp"
+            android:text="정류장 검색"
+            android:textSize="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/btnTimeTable"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="막차 시간표"
+            android:textSize="30dp"
+            android:background="#AFEEEE"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:id="@+id/btnAppInfo"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#AFEEEE"
+            android:layout_margin="10dp"
+            android:text="앱 소개"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
