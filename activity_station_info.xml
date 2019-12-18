@@ -5,36 +5,61 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        ></LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="버스 정류장 검색하기"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:background="@drawable/square"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:orientation="horizontal"
+       >
 
         <EditText
             android:id="@+id/edt_staName"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_weight="9"
+            android:gravity="center"
             android:hint="정류소 이름을 2글자이상 입력하세요"
             android:textSize="20dp"
+            android:background="@drawable/edge_search"
+            android:layout_margin="5dp"
             android:singleLine="true"/>
         <Button
+            android:layout_margin="5dp"
             android:id="@+id/btn_sta_search"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.8"
+            android:layout_weight="1.7"
             android:textSize="20dp"
             android:text="검색"
             android:gravity="center"
-            android:background="#1E90FF"/>
+            android:background="@drawable/search_button"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="5dp"
          android:layout_width="match_parent"
-         android:layout_height="match_parent"
+         android:layout_height="0dp"
+        android:layout_weight="10"
         android:orientation="vertical">
         <ListView
             android:id="@+id/sta_ListView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="9"></ListView>
+            android:layout_weight="8"
+            ></ListView>
         <com.google.android.gms.ads.AdView
             xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/stationAd"
