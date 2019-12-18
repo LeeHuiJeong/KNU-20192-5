@@ -3,17 +3,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"></LinearLayout>
+    <TextView
+
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:text="즐        겨        찾        기"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:background="@drawable/square"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"></LinearLayout>
     <ListView
         android:id="@+id/bookMarkList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"></ListView>
+        android:layout_weight="10"
+        ></ListView>
+    <Button
+        android:id="@+id/btnGotoSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="정류장 검색"
+        android:layout_gravity="center"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="즐겨찾는 정류장을 추가하세요!~"
+        android:layout_gravity="center"/>
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/bookMarkAd"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.2"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
