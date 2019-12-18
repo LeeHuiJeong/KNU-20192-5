@@ -8,7 +8,6 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.AbsListView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ListView;
@@ -74,20 +73,26 @@ public class BusInfoActivity extends AppCompatActivity {            //특정 정
                     //소스에서 <span>태그에 내가 필요한 정보가 들어있음, <span>태그 안의 class속성 값들이 내가 필요한 정보임
                     //route_no
                     //arr_state
-                    //cur_pos nsbus,cur_pos
+                    //cur_pos busNN,cur_pos busDN
 
                     if(tag.getName().equals("span")) {//span태그 찾고 태그의 속성값(class 속성에 해당하는 값)찾기
                         switch (tag.getAttributeValue("class")) {//클래스 속성값 찾기
                             case "route_no":
                                 busInfo=new BusInfo();//한 줄에 들어갈 데이터 묶음
-                                busInfo.route_no=tag.getTextExtractor().toString();//태그의 class속성의 값을 추출해서 저장
+                                busInfo.routeNo =tag.getTextExtractor().toString();//태그의 class속성의 값을 추출해서 저장
                                 break;
                             case "arr_state":
-                                busInfo.arr_state=tag.getTextExtractor().toString();
+                                busInfo.arrState =tag.getTextExtractor().toString();
                                 break;
-                            case "cur_pos":
-                            case "cur_pos busNN":
-                                busInfo.cur_pos=tag.getTextExtractor().toString();
+
+                            case "cur_pos busNN":    //일반 버스인 경우
+                                busInfo.curPos =tag.getTextExtractor().toString();
+                                busInfo.isLowBus=false;
+                                busInfos.add(busInfo);
+                                break;
+                            case "cur_pos busDN":        //저상버스인 경우
+                                busInfo.curPos =tag.getTextExtractor().toString();
+                                busInfo.isLowBus=true;
                                 busInfos.add(busInfo);
                                 break;
                         }
