@@ -8,7 +8,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.4"></LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:padding="5dp"
+        android:text="대구 버스 도착 정보"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:background="@drawable/square"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
         android:orientation="horizontal"
         android:gravity="center">
         <TextView
@@ -18,8 +32,10 @@
             android:layout_height="match_parent"
             android:text="경북대학교 북문 건너"
             android:gravity="center_vertical"
-            android:textSize="30dp"
-            android:textStyle="bold"/>
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:padding="7dp"
+           />
         <CheckBox
             android:id="@+id/chkBookMark"
             android:layout_width="0dp"
@@ -41,7 +57,8 @@
             <ListView
                 android:id="@+id/busList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
             </ListView>
 
             <TextView
@@ -61,7 +78,7 @@
         android:id="@+id/busAd"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_weight="1.0"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
